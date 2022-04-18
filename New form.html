@@ -36,16 +36,16 @@
                 border: #0FA015 1px solid;
             }
 
-    
+
   </style>
   <link rel="stylesheet" href="jquery1.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
 
   <script>
-    
+
     $("document").ready(function(){
-      
+
       $("#btnSubmit").click(function(){
 
         var passwordLength = $("#password").val().length;
@@ -66,61 +66,61 @@
         else{
          alert("Thank You!!!")
         }
-        
 
-       
-      
-        
-        $("#employeeDetail").append("<tr> <td class='workerName'+ >" + $("#name").val() + "</td> <td>" + $("#email").val() + "</td><td>" + $("#password").val() + "</td><td>" 
+
+
+
+
+        $("#employeeDetail").append("<tr> <td class='workerName'+ >" + $("#name").val() + "</td> <td>" + $("#email").val() + "</td><td>" + $("#password").val() + "</td><td>"
           + $("#telephone").val() + "</td><td>" + $("select :selected").text() + "</td></tr>");
 
-        
+
 
         var tableLength = $("tbody tr").length;
         var nameInTable = $(".workerName");
-        
 
-        
+
+
         $("#clickMe").click(function(){
-         
-          
-            
+
+
+
                 console.log(nameInTable[i]);
 //
-      
-
-        });
-
-
-        $("#btnSearch").click(function(){
-
-           
-          var nameInSearch = $("#searchName").val();
-            
-
-             for(var i=0; i<nameInTable.length; i++){
-
-               if (nameInTable[i].val() == nameInSearch) {
-                     alert("you selected right employee!")
-                }
-            
-             }
-
 
 
         });
 
 
-       
-        
-         
+
+
+
+
+
+
      // console.log(tableLength);
 
-           
+
       });
      // $("thead tr").append("<td>" + "category" + "</td>");
 
+     $("#btnSearch").click(function(){
 
+
+      var nameInSearch = $("#searchName").val();
+      var nameInTable = $(".workerName");
+
+        for(var i=0; i<nameInTable.length; i++){
+
+          if (nameInTable[i].textContent == nameInSearch) {
+                alert("you selected right employee!")
+          }
+
+        }
+
+
+
+      });
       $("#password").on('keyup', function(){
     var number = /([0-9])/;
     var alphabets = /([a-zA-Z])/;
@@ -141,16 +141,16 @@
         }
     }
   });
-    
+
     });
-   
+
   </script>
 </head>
 
-<body> 
+<body>
 
   <!-- HOME SECTION -->
-  
+
     <div class="dark-overlay">
       <div class="home-inner container">
         <div class="row">
@@ -168,7 +168,7 @@
                   </div>
                   <div class="form-group">
                     <input type="password" id= "password" class="form-control form-control-lg" placeholder="Password">
-                    <div id="password-strength-status"></div>  
+                    <div id="password-strength-status"></div>
                   </div>
                   <div class="form-group">
                     <input type="tel" class="form-control form-control-lg" id="telephone"placeholder="Telephone">
@@ -182,7 +182,7 @@
                         <option value="">Health & Welness</option>
                       </select>
                   </div>
-                  
+
                 </form>
                 <button class="btn btn-outline-light btn-block" id="btnSubmit" >Submit</button>
               </div>
@@ -198,11 +198,11 @@
 
 
                       <button id="clickMe" class="btn btn-primary ml-5">Click</button>
-                
 
-          
+
+
         <!-- TABLE-->
-          
+
           <div class="container mt-5">
             <div class="row">
               <div class="col">
@@ -283,9 +283,9 @@
     crossorigin="anonymous"></script>
 
   <script>
-    
-    
-  
+
+
+
   </script>
 </body>
 
